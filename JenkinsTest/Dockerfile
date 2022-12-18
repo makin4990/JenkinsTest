@@ -11,5 +11,5 @@ RUN dotnet publish --no-restore -c Release -o out
 
 FROM mcr.microsoft.com/dotnet/runtime:6.0
 WORKDIR /app
-COPY --from=publish /app/publish .
+COPY --from=build-env /app/out .
 ENTRYPOINT ["dotnet", "JenkinsTest.dll"]
