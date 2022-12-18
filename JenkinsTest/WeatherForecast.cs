@@ -11,3 +11,4 @@ namespace JenkinsTest
         public string? Summary { get; set; } 
     }
 }
+
